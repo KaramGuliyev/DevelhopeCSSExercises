@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 190px;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 27px 30px 120px;
+    grid-template-areas:
+    "solution solution"
+    "sign sign"
+    "numbers equal";
+}
+
+.num {   
+    border: 1px solid #a8b7c3;
+    background-color: #edf0f3;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.sg {
+    border: 1px solid #a8b7c3;
+    background-color: #ccd8e0;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.equal {
+    border: 1px solid #a8b7c3;
+    background-color: #ff656e;
+    text-align: center;
+    padding-top: 50px;
+    grid-area: equal;
+    border-bottom-right-radius: 7px;
+}
+
+.zero {
+    border: 1px solid #a8b7c3;
+    background-color: #edf0f3;
+    text-align: center;
+    padding-top: 5px;
+    border-bottom-left-radius: 7px;
+}
+
+.solution {
+    border: 1px solid #a8b7c3;
+    background-color: #364146;
+    text-align: end;
+    color: white;
+    padding-top: 3px;
+    padding-right: 5px;
+    grid-area: solution;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.numbers {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: numbers;
+}
+
+.sign {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: sign;
+}
+
+
