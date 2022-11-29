@@ -1,0 +1,132 @@
+body {
+    display: grid;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.container {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+section {
+    width: 300px;
+    height: 455px;
+    font-family: "Kinetika";
+    background-color: #dedede;
+    border-radius: 26px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 11% 59% 30%;
+    grid-template-areas: "user" "cat-photo" "desc";
+    margin: 10px 2px;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.avatar img {
+    width: 45px;
+    margin-top: 2.5px;
+    margin-left: 9px;
+}
+
+.user-data {
+    grid-area: user;
+    background-color: #a8a8a8;
+    display: flex;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+}
+
+.name-date {
+    width: 100%;
+}
+
+.name-date p:first-child {
+    margin: 0;
+    font-weight: bolder;
+    font-size: 15.5px;
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
+.name-date p:last-child {
+    margin: 0;
+    font-size: 12.5px;
+    color: rgb(226, 226, 226);
+    padding-left: 8px;
+}
+
+.ellipsis {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.ellipsis img {
+    width: 23px;
+}   
+
+.cat-photo {
+    grid-area: cat-photo;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 272px;
+}
+
+.cat-photo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 272px;
+    object-fit: cover;
+}
+
+.desc {
+    grid-area: desc;
+}
+
+.desc p {
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    margin-left: 8px;
+}
+
+.icons svg {
+    width: 17px;
+    padding: 13px 0 6px 17px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
